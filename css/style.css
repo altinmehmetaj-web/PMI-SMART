@@ -40,6 +40,11 @@ a{
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")
 }
 
+
+/* =========================================
+   NAV
+========================================= */
+
 .nav{
   height:82px;
   border-bottom:1px solid var(--line);
@@ -115,7 +120,9 @@ nav a,
 }
 
 
-/* HERO */
+/* =========================================
+   HERO
+========================================= */
 
 .hero{
   max-width:var(--max);
@@ -337,7 +344,9 @@ h1 em{
 }
 
 
-/* GENERAL SECTIONS */
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
 
 .section{
   max-width:var(--max);
@@ -449,9 +458,6 @@ h1 em{
   max-width:680px
 }
 
-
-/* 5 CARD: MARKETING / CRM / AI / DATI / FIDELIZZAZIONE */
-
 .cards{
   display:grid;
   grid-template-columns:repeat(5,1fr);
@@ -491,7 +497,9 @@ h1 em{
 }
 
 
-/* METODO */
+/* =========================================
+   METODO
+========================================= */
 
 .steps{
   border-top:1px solid var(--line)
@@ -524,7 +532,9 @@ h1 em{
 }
 
 
-/* SPEED / ATTIVAZIONE */
+/* =========================================
+   ATTIVAZIONE
+========================================= */
 
 .speed-box{
   border:1px solid var(--line);
@@ -568,306 +578,252 @@ h1 em{
 
 
 /* =========================================
-   VALUE / COST COMPARISON
+   IL VALORE
+   STESSI COLORI DELLA LANDING
 ========================================= */
 
 .value-section{
   position:relative;
-  padding:120px 0;
+  padding:130px 25px;
   overflow:hidden;
-  background:
-    radial-gradient(
-      circle at 15% 20%,
-      rgba(45,110,255,0.12),
-      transparent 35%
-    ),
-    radial-gradient(
-      circle at 85% 80%,
-      rgba(145,70,255,0.10),
-      transparent 35%
-    )
-}
-
-.value-section::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  background-image:
-    linear-gradient(
-      rgba(255,255,255,0.025) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,0.025) 1px,
-      transparent 1px
-    );
-  background-size:50px 50px;
-  mask-image:linear-gradient(
-    to bottom,
-    transparent,
-    black 20%,
-    black 80%,
-    transparent
-  )
+  border-top:1px solid var(--line);
+  background:var(--bg)
 }
 
 .value-section .container{
+  max-width:var(--max);
+  margin:auto;
   position:relative;
   z-index:2
 }
 
 .section-eyebrow{
   margin-bottom:25px;
-  font-size:12px;
+  font-size:10px;
   font-weight:700;
-  letter-spacing:.18em;
-  color:#6f8cff;
+  letter-spacing:.19em;
+  color:#727b88;
   text-transform:uppercase
 }
 
+
+/* HEADER */
+
 .value-header{
   display:grid;
-  grid-template-columns:1.2fr 0.8fr;
-  gap:60px;
+  grid-template-columns:1.15fr .85fr;
+  gap:80px;
   align-items:end;
-  margin-bottom:60px
+  margin-bottom:55px
 }
 
 .value-header h2{
   margin:0;
   max-width:850px;
-  font-size:clamp(42px,5vw,72px);
+  font-size:clamp(43px,5.5vw,72px);
   line-height:.98;
-  letter-spacing:-.04em
+  letter-spacing:-.055em;
+  font-family:"Space Grotesk",sans-serif
 }
 
 .value-header h2 span{
   display:block;
-  background:linear-gradient(
-    90deg,
-    #ffffff,
-    #6f8cff,
-    #a978ff
-  );
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent
+  color:var(--lime)
+}
+
+.value-intro{
+  max-width:520px
 }
 
 .value-intro p{
   margin:0;
-  max-width:520px;
-  color:rgba(255,255,255,0.65);
-  font-size:17px;
+  color:var(--muted);
+  font-size:16px;
   line-height:1.7
 }
 
-.value-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:24px
-}
+
+/* MAIN CARD */
 
 .value-card{
   position:relative;
-  padding:42px;
-  border-radius:28px;
-  border:1px solid rgba(255,255,255,0.10);
-  background:rgba(255,255,255,0.035);
-  backdrop-filter:blur(18px);
+  padding:45px;
+  border:1px solid var(--line);
+  background:linear-gradient(145deg,#11151d,#0a0d12);
   overflow:hidden
 }
 
-.value-card-cost{
-  border-color:rgba(255,255,255,0.08)
-}
 
-.value-card-smart{
-  border-color:rgba(100,130,255,0.35);
-  background:
-    linear-gradient(
-      145deg,
-      rgba(65,95,255,0.14),
-      rgba(140,70,255,0.08)
-    ),
-    rgba(255,255,255,0.035);
-  box-shadow:0 25px 80px rgba(50,80,255,0.10)
-}
+/* GRIGLIA INTERNA */
 
-.value-card-smart::before{
+.value-card::before{
   content:"";
   position:absolute;
-  width:260px;
-  height:260px;
-  top:-130px;
-  right:-100px;
-  border-radius:50%;
-  background:rgba(100,130,255,0.18);
-  filter:blur(70px)
+  inset:0;
+  pointer-events:none;
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.025) 1px,
+      transparent 1px
+    );
+  background-size:50px 50px
 }
+
+
+/* LABEL */
 
 .value-card-label{
   position:relative;
   display:flex;
   align-items:center;
   gap:10px;
-  margin-bottom:35px;
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:.15em;
-  color:rgba(255,255,255,0.55)
+  margin-bottom:45px;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.16em;
+  color:#727b88
 }
 
 .value-dot{
-  width:8px;
-  height:8px;
+  width:7px;
+  height:7px;
   border-radius:50%;
-  background:#777
+  background:var(--lime);
+  box-shadow:0 0 15px var(--lime)
 }
 
-.smart-dot{
-  background:#75ff91;
-  box-shadow:0 0 15px rgba(117,255,145,0.8)
+
+/* CONTENUTO */
+
+.value-main{
+  position:relative;
+  display:grid;
+  grid-template-columns:340px 1fr;
+  gap:70px;
+  align-items:center
 }
 
 .value-price{
-  position:relative;
-  display:flex;
-  flex-direction:column;
-  margin-bottom:25px
+  border-right:1px solid var(--line);
+  padding-right:60px
 }
 
 .value-price strong{
-  font-size:clamp(48px,5vw,76px);
+  display:block;
+  font:600 clamp(58px,6vw,82px) "Space Grotesk";
   line-height:.95;
-  letter-spacing:-.05em
+  letter-spacing:-.06em;
+  color:var(--text)
 }
 
 .value-price span{
-  margin-top:10px;
-  color:rgba(255,255,255,0.45);
-  font-size:14px
+  display:block;
+  margin-top:14px;
+  color:#727b88;
+  font-size:13px
 }
 
-.smart-price strong{
-  background:linear-gradient(
-    90deg,
-    #ffffff,
-    #6f8cff,
-    #a978ff
-  );
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent
+
+/* MESSAGGIO */
+
+.value-message{
+  max-width:700px
 }
 
-.value-description{
-  position:relative;
-  max-width:520px;
-  margin:0 0 35px;
-  color:rgba(255,255,255,0.62);
+.value-message h3{
+  margin:0 0 20px;
+  font-size:25px;
+  line-height:1.15;
+  letter-spacing:-.025em
+}
+
+.value-message p{
+  margin:0 0 18px;
+  color:var(--muted);
   font-size:15px;
   line-height:1.7
 }
 
-.value-list{
-  position:relative;
-  margin:0;
-  padding:0;
-  list-style:none;
-  border-top:1px solid rgba(255,255,255,0.08)
+.value-message p:last-child{
+  margin-bottom:0
 }
 
-.value-list li{
-  display:flex;
-  align-items:center;
-  gap:18px;
-  padding:17px 0;
-  border-bottom:1px solid rgba(255,255,255,0.08);
-  color:rgba(255,255,255,0.72);
-  font-size:14px
+
+/* EVIDENZA */
+
+.value-highlight{
+  padding-left:20px;
+  border-left:2px solid var(--lime);
+  color:#dce1e8 !important
 }
 
-.value-list li span{
-  color:rgba(255,255,255,0.3);
-  font-size:11px;
-  font-weight:700
-}
 
-.smart-highlight{
+/* PARTE FINALE */
+
+.value-bottom{
   position:relative;
   display:flex;
-  align-items:center;
-  gap:18px;
-  padding:22px;
-  margin-top:30px;
-  border-radius:18px;
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.08)
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:40px;
+  margin-top:55px;
+  padding-top:30px;
+  border-top:1px solid var(--line)
 }
 
-.smart-icon{
+.value-bottom>div:first-child{
+  max-width:850px
+}
+
+.value-small-label{
+  display:block;
+  margin-bottom:10px;
+  color:#687180;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.15em
+}
+
+.value-bottom strong{
+  display:block;
+  font-size:16px;
+  line-height:1.5;
+  font-weight:500;
+  color:#d9dee6
+}
+
+.value-arrow{
   display:flex;
   align-items:center;
   justify-content:center;
-  width:44px;
-  height:44px;
+  width:48px;
+  height:48px;
   flex-shrink:0;
-  border-radius:14px;
-  background:linear-gradient(
-    135deg,
-    #5d7cff,
-    #9a63ff
-  );
+  border:1px solid var(--line);
+  color:var(--lime);
   font-size:20px
 }
 
-.smart-highlight strong{
-  display:block;
-  margin-bottom:4px;
-  font-size:15px
-}
 
-.smart-highlight p{
-  margin:0;
-  color:rgba(255,255,255,0.5);
-  font-size:13px
-}
-
-.smart-bottom{
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-top:28px;
-  padding-top:22px;
-  border-top:1px solid rgba(255,255,255,0.12)
-}
-
-.smart-bottom span{
-  color:rgba(255,255,255,0.45);
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:.12em
-}
-
-.smart-bottom strong{
-  font-size:22px;
-  color:#fff
-}
+/* NOTA */
 
 .value-note{
   max-width:900px;
-  margin-top:24px;
-  color:rgba(255,255,255,0.35);
-  font-size:11px;
+  margin-top:18px;
+  color:#626b77;
+  font-size:10px;
   line-height:1.6
 }
 
 
-/* PRICING */
+/* =========================================
+   PREZZO
+========================================= */
 
 .price-card{
   margin-top:50px;
@@ -908,7 +864,9 @@ h1 em{
 }
 
 
-/* TABLE */
+/* =========================================
+   TABLE
+========================================= */
 
 .table{
   margin-top:45px;
@@ -944,7 +902,9 @@ h1 em{
 }
 
 
-/* CHIPS */
+/* =========================================
+   CHIPS
+========================================= */
 
 .chips{
   display:flex;
@@ -962,7 +922,9 @@ h1 em{
 }
 
 
-/* TESTIMONIALS */
+/* =========================================
+   TESTIMONIANZE
+========================================= */
 
 .testimonials{
   border-top:1px solid var(--line)
@@ -1012,7 +974,9 @@ h1 em{
 }
 
 
-/* ABOUT */
+/* =========================================
+   ABOUT
+========================================= */
 
 .about-box{
   display:grid;
@@ -1040,7 +1004,9 @@ h1 em{
 }
 
 
-/* CONTACT */
+/* =========================================
+   CONTATTI
+========================================= */
 
 .contact{
   text-align:center;
@@ -1106,7 +1072,9 @@ h1 em{
 }
 
 
-/* FOOTER */
+/* =========================================
+   FOOTER
+========================================= */
 
 footer{
   max-width:var(--max);
@@ -1131,7 +1099,9 @@ footer{
 }
 
 
-/* ANIMATION */
+/* =========================================
+   ANIMATION
+========================================= */
 
 @keyframes spin{
   to{
@@ -1220,19 +1190,36 @@ footer{
     padding:95px 20px
   }
 
-  .value-header{
-    grid-template-columns:1fr;
-    gap:25px
+
+  /* VALUE MOBILE */
+
+  .value-section{
+    padding:95px 20px
   }
 
-  .value-grid{
-    grid-template-columns:1fr
+  .value-header{
+    grid-template-columns:1fr;
+    gap:30px
+  }
+
+  .value-main{
+    grid-template-columns:1fr;
+    gap:35px
+  }
+
+  .value-price{
+    border-right:0;
+    border-bottom:1px solid var(--line);
+    padding-right:0;
+    padding-bottom:30px
   }
 
 }
 
 
-/* MOBILE */
+/* =========================================
+   SMALL MOBILE
+========================================= */
 
 @media(max-width:560px){
 
@@ -1261,8 +1248,11 @@ footer{
     font-size:70px
   }
 
+
+  /* VALUE */
+
   .value-section{
-    padding:80px 0
+    padding:80px 20px
   }
 
   .value-header h2{
@@ -1270,15 +1260,23 @@ footer{
   }
 
   .value-card{
-    padding:30px 24px
+    padding:28px 22px
   }
 
   .value-price strong{
     font-size:58px
   }
 
-  .value-intro p{
-    font-size:15px
+  .value-message h3{
+    font-size:21px
+  }
+
+  .value-bottom{
+    align-items:flex-start
+  }
+
+  .value-bottom strong{
+    font-size:14px
   }
 
 }
