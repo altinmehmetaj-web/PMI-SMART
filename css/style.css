@@ -1280,3 +1280,13 @@ footer{
   }
 
 }
+/* SMART BUSINESS - riduzione su mobile */
+@media(max-width:560px){
+
+  .card3d{
+    width:310px;
+    min-height:250px;
+    padding:18px;
+  }
+
+}
